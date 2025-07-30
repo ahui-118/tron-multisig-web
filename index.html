@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TRON Multisig Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 TRON 多签权限管理</h1>
+    <p id="wallet-status">未连接钱包</p>
+
+    <button onclick="connectWallet()">🔗 连接钱包</button>
+    <button onclick="savePermissions()">📥 保存当前权限</button>
+    <button onclick="resetToSingle()">🧹 重置为单签</button>
+    <input type="file" id="upload" accept=".json" onchange="restorePermissions(event)" />
+    <label for="upload" class="file-btn">♻️ 恢复权限结构</label>
+
+    <pre id="output"></pre>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/tronweb@6.0.0-beta.3/dist/TronWeb.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
